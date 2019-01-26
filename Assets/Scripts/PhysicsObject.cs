@@ -82,11 +82,13 @@ public class PhysicsObject : MonoBehaviour
         // default value
         grounded = false;
 
+        //First
         //false: idicate to calculate horizontal movmt
         Movement(moveDirection, false);
 
         moveDirection = Vector2.up * deltaPosition.y;
 
+        //Second
         //aply movemnt - true: idicate to calculate vertical movmt
         Movement(moveDirection, true);
     }
