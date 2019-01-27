@@ -97,41 +97,37 @@ public class PhysicsObject : MonoBehaviour
         Movement(moveDirection, true);
     }
 
-    //set position
-    void Movement(Vector2 moveDirection, bool yMovement)
+    void Movement(Vector2 move, bool yMovement)
     {
-        float distance = moveDirection.magnitude;
-
-        //if we want check colisions menausred by minMoveDistance
+        float distance = move.magnitude;
         if (distance > minMoveDistance)
         {
-            //check if any of the attached colliders of rb2d are going to overlap (solapar) with anything in the next frame
-            //ignoring the colliders attached to the same Rigidbody2D
-            //move a cast from payer in front to us
-            //in the next fram is this player going to overlap with another collider
-            //distance: betwen playert cast
-            int count = rb2d.Cast(moveDirection, contactFilter, hitBuffer, distance + shellRadius);
-
-            //copy the array hit result 
+            int count = rb2d.Cast(move, contactFilter, hitBuffer, distance + shellRadius);
             hitBufferList.Clear();
+
             for (int i = 0; i < count; i++)
             {
-                hitBufferList.Add(hitBuffer[i]);
+
+                // This line and the if statement will check if a platform has a PlatformEffector2D.
+                // If it does, it will allow the player to jump up from underneath, but not fall through
+                // the top surface
+                PlatformEffector2D platform = hitBuffer[i].collider.GetComponent<PlatformEffector2D>();
+                if (!platform || (hitBuffer[i].normal == Vector2.up && velocity.y < 0 && yMovement))
+                {
+
+                    hitBufferList.Add(hitBuffer[i]);
+
+                }
+
+
             }
 
-            //determine the angle of the thing that we're colliding with 
             for (int i = 0; i < hitBufferList.Count; i++)
             {
-                //compare the normal to a minimum ground nomal values
-                Vector2 currentNormal = hitBufferList[i].normal;
 
-                //trying to determinate if player is grounded
-                //the main manifestation of that in our game is that the player is 
-                //animations
+                Vector2 currentNormal = hitBufferList[i].normal;
                 if (currentNormal.y > minGroundNormalY)
                 {
-                    //if the angle of the object that we´re gorunding o not: example - walls
-                    // Y-movement insolate to hadl easly
                     grounded = true;
                     if (yMovement)
                     {
@@ -139,29 +135,19 @@ public class PhysicsObject : MonoBehaviour
                         currentNormal.x = 0;
                     }
                 }
-
-                //difference between the velocity and the corrent normal and determining 
-                //whether we need to substract from our velocity to prevent the player from
-                //entering  into another collider 
                 float projection = Vector2.Dot(velocity, currentNormal);
                 if (projection < 0)
                 {
-                    //cancell out the aprt of our velocity that would be stopped by collision
+
                     velocity = velocity - projection * currentNormal;
+
                 }
-
-                //check if the colision in our lists distance is less than our shellsize constant
-                // then use the shell size for our distance insted
-                float modifiedDistance = hitBufferList[i].distance - shellRadius;
-
-                //distance is modified 
+                float modifiedDistance = hitBuffer[i].distance - shellRadius;
                 distance = modifiedDistance < distance ? modifiedDistance : distance;
             }
 
         }
-
-        //apply de move 
-        rb2d.position = rb2d.position + moveDirection.normalized * distance;
+        rb2d.position = rb2d.position + move.normalized * distance;
     }
 
 }

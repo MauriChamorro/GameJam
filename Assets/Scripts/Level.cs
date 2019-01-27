@@ -9,11 +9,7 @@ namespace Assets.Scripts
         public Sprite[] _houseSprites;
         public Transform lastCheckPoint;
 
-        private int _cantItems;
-
-        private void Awake()
-        {
-        }
+        public int _cantItems;
 
         private void Start()
         {
@@ -21,10 +17,16 @@ namespace Assets.Scripts
             CheckPoint(lastCheckPoint);
         }
 
-        public void CheckPoint(Transform pCheckpointPos)
+        public void SetStartCheckPoint(Transform pCheckPointPos)
         {
-            lastCheckPoint = pCheckpointPos;
+            lastCheckPoint = pCheckPointPos;
+        }
+
+        public void CheckPoint(Transform pCheckPointPos)
+        {
+            lastCheckPoint = pCheckPointPos;
             _cantItems++;
+            print("items: " + _cantItems);
             _houseRenderer.sprite = _houseSprites[_cantItems];
         }
 
@@ -32,5 +34,6 @@ namespace Assets.Scripts
         {
             return lastCheckPoint.position;
         }
+
     }
 }

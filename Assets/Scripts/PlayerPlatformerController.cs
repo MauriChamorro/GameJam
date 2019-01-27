@@ -1,12 +1,16 @@
 ﻿using UnityEngine;
+using Assets.Scripts;
 
 public class PlayerPlatformerController : PhysicsObject
 {
+    public GameManager _gameManager;
+
     public float maxSpeed = 7;
     public float jumpTakeOffSpeed = 7;
 
     private SpriteRenderer spriteRenderer;
     private Animator animator;
+
 
     // Use this for initialization
     void Awake()
@@ -22,7 +26,7 @@ public class PlayerPlatformerController : PhysicsObject
 
         movementVector.x = Input.GetAxis("Horizontal");
 
-        if (Input.GetButtonDown("Jump") && grounded)
+        if (grounded && (Input.GetAxis("Vertical") > 0 || Input.GetButtonDown("Jump")))
         {
             //add velocity along y axis
             velocity.y = jumpTakeOffSpeed;
@@ -32,7 +36,7 @@ public class PlayerPlatformerController : PhysicsObject
             //reduce de velocity when jumpping
             if (velocity.y > 0)
             {
-                velocity.y = velocity.y * 0.5f;
+                velocity.y = velocity.y * 0.34f;
             }
         }
 
@@ -42,9 +46,25 @@ public class PlayerPlatformerController : PhysicsObject
             spriteRenderer.flipX = !spriteRenderer.flipX;
         }
 
-        //animator.SetBool("grounded", grounded);
-        //animator.SetFloat("velocityX", Mathf.Abs(velocity.x) / maxSpeed);
+        animator.SetBool("Grounded", grounded);
+        animator.SetFloat("Movement", Mathf.Abs(velocity.x) / maxSpeed);
 
         targetVelocity = movementVector * maxSpeed;
+    }
+
+    private void OnCollisionEnter2D(Collision2D collision)
+    {
+        if (collision.gameObject.tag == "Trap")
+        {
+            _gameManager.Respawn();
+        }
+    }
+
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        if (collision.gameObject.tag == "Item")
+        {
+            _gameManager.CheckPointCatched(collision.transform);
+        }
     }
 }

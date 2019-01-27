@@ -204,6 +204,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 5964597570448289354}
+  - component: {fileID: 8145688675516319431}
   m_Layer: 0
   m_Name: Chupetin
   m_TagString: Untagged
@@ -227,3 +228,19 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &8145688675516319431
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5964597570448289349}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ab0940d79ca4c4044ad8c22e6158c292, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  MovementX: 3
+  MovementY: 0
+  HorizontalSpeed: 5
+  VerticalSpeed: 0
