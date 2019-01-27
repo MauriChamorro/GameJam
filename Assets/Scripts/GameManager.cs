@@ -25,13 +25,19 @@ namespace Assets.Scripts
 
         private void Awake()
         {
-            _soundManager = SoundManager.Instance;
-
+           
             _player.transform.position = _level.GetLastCheckPointPosition();
             
             //SetGame();
 
             //SetLevel();
+        }
+
+        private void Start()
+        {
+            _soundManager = SoundManager.Instance;
+            _soundManager.SetMusicClipName("Lv 1 Día");
+            _soundManager.PlayMusicClipName();
         }
 
         void CheckPointChatched(Transform pCheck)

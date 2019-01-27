@@ -1,11 +1,7 @@
-﻿using System;
-using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
 
 public class PlatformMovement : MonoBehaviour
 {
-
     public float MovementX;
     public float MovementY;
     public float HorizontalSpeed;

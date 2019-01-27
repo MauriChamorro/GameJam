@@ -3,6 +3,10 @@ using UnityEngine;
 
 public class PhysicsObject : MonoBehaviour
 {
+    public float factor1;
+
+    public float factor2;
+
     public float minGroundNormalY = .65f;
 
     //for gravity
@@ -27,9 +31,9 @@ public class PhysicsObject : MonoBehaviour
     protected List<RaycastHit2D> hitBufferList = new List<RaycastHit2D>(16);
 
     //padding of distance, to make sure that we never get stuck inside another collider
-    protected const float shellRadius = 0.01f;
+    public float shellRadius = 0.01f;
 
-    protected const float minMoveDistance = 0.001f;
+    public float minMoveDistance = 0.001f;
     #endregion
 
 
@@ -71,7 +75,7 @@ public class PhysicsObject : MonoBehaviour
         velocity.x = targetVelocity.x;
 
         Vector2 deltaPosition = velocity * Time.deltaTime;
-        
+
         //calculate movement
         //direction to try to move along the ground
         //get the perperdicular normal of original
@@ -84,7 +88,7 @@ public class PhysicsObject : MonoBehaviour
 
         //First
         //false: idicate to calculate horizontal movmt
-        Movement(moveDirection, false);
+        Movement(moveDirection, true);
 
         moveDirection = Vector2.up * deltaPosition.y;
 
@@ -98,7 +102,7 @@ public class PhysicsObject : MonoBehaviour
     {
         float distance = moveDirection.magnitude;
 
-        // to if we want check colisions menausred by minMoveDistance
+        //if we want check colisions menausred by minMoveDistance
         if (distance > minMoveDistance)
         {
             //check if any of the attached colliders of rb2d are going to overlap (solapar) with anything in the next frame
