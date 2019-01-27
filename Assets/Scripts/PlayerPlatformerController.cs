@@ -66,5 +66,10 @@ public class PlayerPlatformerController : PhysicsObject
         {
             _gameManager.CheckPointCatched(collision.transform);
         }
+
+        if (collision.gameObject.tag == "Home")
+        {
+            _gameManager.ChangeMap();
+        }
     }
 }

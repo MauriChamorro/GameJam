@@ -6,6 +6,7 @@ TagManager:
   tags:
   - Item
   - Trap
+  - Home
   layers:
   - Default
   - TransparentFX
@@ -40,6 +41,9 @@ TagManager:
   - 
   - 
   m_SortingLayers:
+  - name: Background
+    uniqueID: 3941499359
+    locked: 0
   - name: Traps
     uniqueID: 1998212485
     locked: 0

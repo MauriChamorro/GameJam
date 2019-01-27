@@ -88,7 +88,7 @@ public class PhysicsObject : MonoBehaviour
 
         //First
         //false: idicate to calculate horizontal movmt
-        Movement(moveDirection, true);
+        Movement(moveDirection, false);
 
         moveDirection = Vector2.up * deltaPosition.y;
 
@@ -114,9 +114,7 @@ public class PhysicsObject : MonoBehaviour
                 PlatformEffector2D platform = hitBuffer[i].collider.GetComponent<PlatformEffector2D>();
                 if (!platform || (hitBuffer[i].normal == Vector2.up && velocity.y < 0 && yMovement))
                 {
-
                     hitBufferList.Add(hitBuffer[i]);
-
                 }
 
 
@@ -147,6 +145,7 @@ public class PhysicsObject : MonoBehaviour
             }
 
         }
+
         rb2d.position = rb2d.position + move.normalized * distance;
     }
 

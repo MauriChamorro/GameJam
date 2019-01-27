@@ -1,4 +1,5 @@
 ﻿using UnityEngine;
+using UnityEngine.UI;
 
 namespace Assets.Scripts
 {
@@ -8,6 +9,8 @@ namespace Assets.Scripts
 
         public GameObject Map1;
         public GameObject Map2;
+
+        public Text _text;
 
         public Transform _startRespawn;
 
@@ -22,9 +25,9 @@ namespace Assets.Scripts
 
         private void Awake()
         {
-           
+
             _player.transform.position = _level.GetLastCheckPointPosition();
-            
+
         }
 
         private void Start()
@@ -43,7 +46,9 @@ namespace Assets.Scripts
 
             if (_level._cantItems == 3)
             {
-                //eventos para volver
+                _text.gameObject.SetActive(true);
+                _soundManager.SetMusicClipName("Lv 1 Noche");
+                _soundManager.PlayMusicClipName();
             }
         }
 
@@ -55,19 +60,28 @@ namespace Assets.Scripts
 
         private void Update()
         {
-            if (_level._cantItems == 3 )
-            {
-                _soundManager.SetMusicClipName("Lv 1 Noche");
-            }
         }
 
-        private void ChangeMap()
+        public void ChangeMap()
         {
-            Map1.SetActive(false);
+            print("ChangeMap(): " + _level._cantItems);
 
-            Map1.SetActive(true);
+            if (_level._cantItems == 3)
+            {
+                _soundManager.SetMusicClipName("Lv complete");
+                _soundManager.PlayMusicClipName();
 
-            _level.SetStartCheckPoint(_startRespawn);
+                Map1.SetActive(false);
+
+                Map2.SetActive(true);
+
+                _level.SetStartCheckPoint(_startRespawn);
+
+                _level._cantItems++;
+
+                _text.text = "Thank you for playing";
+
+            }
         }
 
     }

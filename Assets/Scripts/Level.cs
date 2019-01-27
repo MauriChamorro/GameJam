@@ -26,7 +26,6 @@ namespace Assets.Scripts
         {
             lastCheckPoint = pCheckPointPos;
             _cantItems++;
-            print("items: " + _cantItems);
             _houseRenderer.sprite = _houseSprites[_cantItems];
         }
 
