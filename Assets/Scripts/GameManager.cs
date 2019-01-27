@@ -1,19 +1,16 @@
 ﻿using UnityEngine;
-using UnityEngine.SceneManagement;
-using UnityEngine.UI;
-using System.Linq;
 
 namespace Assets.Scripts
 {
     public class GameManager : MonoBehaviour
     {
-        public GameObject MenuPanel;
-        public SoundManager soundManager;
+        public PlayerPlatformerController _player;
 
-        public Text levelText;
-        public Text gameOverText;
-        public Text countToPlayText;
-        public Text[] textButtons;
+        public GameObject _menuPanel;
+        public SoundManager _soundManager;
+
+        public Level _level;
+        public HUD _hud;
 
         #region Lerp
         //public float currentClockLerp;
@@ -28,8 +25,10 @@ namespace Assets.Scripts
 
         private void Awake()
         {
-            soundManager = SoundManager.Instance;
+            _soundManager = SoundManager.Instance;
 
+            _player.transform.position = _level.GetLastCheckPointPosition();
+            
             //SetGame();
 
             //SetLevel();
