@@ -19,8 +19,6 @@ namespace Assets.Scripts
         {
             _cantItems = -1;
             CheckPoint(lastCheckPoint);
-
-            print(GetLastCheckPointPosition());
         }
 
         public void CheckPoint(Transform pCheckpointPos)

@@ -34,6 +34,21 @@ namespace Assets.Scripts
             //SetLevel();
         }
 
+        void CheckPointChatched(Transform pCheck)
+        {
+            // reproducir sonido
+
+            _level.CheckPoint(pCheck);
+        }
+
+        void Respawn()
+        {
+            //reproducir sonido
+
+            _player.transform.position = _level.GetLastCheckPointPosition();
+        }
+
+
         //private void Update()
         //{
         //    if (Input.GetButtonDown("Cancel"))
