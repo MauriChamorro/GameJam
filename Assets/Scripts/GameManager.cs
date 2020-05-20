@@ -37,10 +37,10 @@ namespace Assets.Scripts
             _soundManager.PlayMusicClipName();
         }
 
-        public void CheckPointCatched(Transform pCheck)
+        public void CheckPointReached(Transform pCheck)
         {
             _soundManager.PlaySFXClipName("Select o pick up");
-            _level.CheckPoint(pCheck);
+            _level.SetCheckPoint(pCheck);
             pCheck.GetComponent<Renderer>().enabled = false;
             pCheck.GetComponent<CircleCollider2D>().enabled = false;
 
@@ -52,20 +52,14 @@ namespace Assets.Scripts
             }
         }
 
-        public void Respawn()
+        public void ReSpawn()
         {
             _soundManager.PlaySFXClipName("Error 5");
             _player.transform.position = _level.GetLastCheckPointPosition();
         }
 
-        private void Update()
+        public void LevelUp()
         {
-        }
-
-        public void ChangeMap()
-        {
-            print("ChangeMap(): " + _level._cantItems);
-
             if (_level._cantItems == 3)
             {
                 _soundManager.SetMusicClipName("Lv complete");

@@ -881,214 +881,6 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 1141110567}
   m_PrefabAsset: {fileID: 0}
---- !u!213 &255495410
-Sprite:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_Name: 
-  m_Rect:
-    serializedVersion: 2
-    x: 0
-    y: 0
-    width: 4
-    height: 4
-  m_Offset: {x: 0, y: 0}
-  m_Border: {x: 0, y: 0, z: 0, w: 0}
-  m_PixelsToUnits: 4
-  m_Pivot: {x: 0.5, y: 0.5}
-  m_Extrude: 0
-  m_IsPolygon: 0
-  m_AtlasName: 
-  m_PackingTag: 
-  m_RenderDataKey:
-    00000000000000000000000000000000: 0
-  m_AtlasTags: []
-  m_SpriteAtlas: {fileID: 0}
-  m_RD:
-    serializedVersion: 3
-    texture: {fileID: 0}
-    alphaTexture: {fileID: 0}
-    m_SubMeshes:
-    - serializedVersion: 2
-      firstByte: 0
-      indexCount: 6
-      topology: 0
-      baseVertex: 0
-      firstVertex: 0
-      vertexCount: 4
-      localAABB:
-        m_Center: {x: 0, y: 0, z: 0}
-        m_Extent: {x: 0, y: 0, z: 0}
-    m_IndexBuffer: 000001000200020001000300
-    m_VertexData:
-      serializedVersion: 2
-      m_VertexCount: 4
-      m_Channels:
-      - stream: 0
-        offset: 0
-        format: 0
-        dimension: 3
-      - stream: 0
-        offset: 0
-        format: 0
-        dimension: 0
-      - stream: 0
-        offset: 0
-        format: 0
-        dimension: 0
-      - stream: 0
-        offset: 0
-        format: 0
-        dimension: 0
-      - stream: 1
-        offset: 0
-        format: 0
-        dimension: 2
-      - stream: 0
-        offset: 0
-        format: 0
-        dimension: 0
-      - stream: 0
-        offset: 0
-        format: 0
-        dimension: 0
-      - stream: 0
-        offset: 0
-        format: 0
-        dimension: 0
-      - stream: 0
-        offset: 0
-        format: 0
-        dimension: 0
-      - stream: 0
-        offset: 0
-        format: 0
-        dimension: 0
-      - stream: 0
-        offset: 0
-        format: 0
-        dimension: 0
-      - stream: 0
-        offset: 0
-        format: 0
-        dimension: 0
-      - stream: 0
-        offset: 0
-        format: 0
-        dimension: 0
-      - stream: 0
-        offset: 0
-        format: 0
-        dimension: 0
-      m_DataSize: 80
-      _typelessdata: 000000bf0000003f000000000000003f0000003f00000000000000bf000000bf000000000000003f000000bf000000000000000000000000000000000000000000000000000000000000000000000000
-    m_Bindpose: []
-    textureRect:
-      serializedVersion: 2
-      x: 0
-      y: 0
-      width: 4
-      height: 4
-    textureRectOffset: {x: 0, y: 0}
-    atlasRectOffset: {x: -1, y: -1}
-    settingsRaw: 64
-    uvTransform: {x: 4, y: 2, z: 4, w: 2}
-    downscaleMultiplier: 1
-  m_AtlasRD:
-    serializedVersion: 3
-    texture: {fileID: 0}
-    alphaTexture: {fileID: 0}
-    m_SubMeshes:
-    - serializedVersion: 2
-      firstByte: 0
-      indexCount: 6
-      topology: 0
-      baseVertex: 0
-      firstVertex: 0
-      vertexCount: 4
-      localAABB:
-        m_Center: {x: 0, y: 0, z: 0}
-        m_Extent: {x: 0, y: 0, z: 0}
-    m_IndexBuffer: 000001000200020001000300
-    m_VertexData:
-      serializedVersion: 2
-      m_VertexCount: 4
-      m_Channels:
-      - stream: 0
-        offset: 0
-        format: 0
-        dimension: 3
-      - stream: 0
-        offset: 0
-        format: 0
-        dimension: 0
-      - stream: 0
-        offset: 0
-        format: 0
-        dimension: 0
-      - stream: 0
-        offset: 0
-        format: 0
-        dimension: 0
-      - stream: 1
-        offset: 0
-        format: 0
-        dimension: 2
-      - stream: 0
-        offset: 0
-        format: 0
-        dimension: 0
-      - stream: 0
-        offset: 0
-        format: 0
-        dimension: 0
-      - stream: 0
-        offset: 0
-        format: 0
-        dimension: 0
-      - stream: 0
-        offset: 0
-        format: 0
-        dimension: 0
-      - stream: 0
-        offset: 0
-        format: 0
-        dimension: 0
-      - stream: 0
-        offset: 0
-        format: 0
-        dimension: 0
-      - stream: 0
-        offset: 0
-        format: 0
-        dimension: 0
-      - stream: 0
-        offset: 0
-        format: 0
-        dimension: 0
-      - stream: 0
-        offset: 0
-        format: 0
-        dimension: 0
-      m_DataSize: 80
-      _typelessdata: 000000bf0000003f000000000000003f0000003f00000000000000bf000000bf000000000000003f000000bf000000000000000000000000000000000000000000000000000000000000000000000000
-    m_Bindpose: []
-    textureRect:
-      serializedVersion: 2
-      x: 0
-      y: 0
-      width: 4
-      height: 4
-    textureRectOffset: {x: 0, y: 0}
-    atlasRectOffset: {x: -1, y: -1}
-    settingsRaw: 64
-    uvTransform: {x: 4, y: 2, z: 4, w: 2}
-    downscaleMultiplier: 1
-  m_PhysicsShape: []
-  m_Bones: []
-  m_SpriteID: 
 --- !u!1001 &271926696
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1410,40 +1202,6 @@ PlatformEffector2D:
   m_UseSideFriction: 0
   m_UseSideBounce: 0
   m_SideArc: 1
---- !u!114 &358421304
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 13312, guid: 0000000000000000e000000000000000, type: 0}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_Sprite: {fileID: 255495410}
-  m_Color: {r: 0.8172023, g: 0.550997, b: 0.5685949, a: 1}
-  m_Transform:
-    e00: 1
-    e01: 0
-    e02: 0
-    e03: 0
-    e10: 0
-    e11: 1
-    e12: 0
-    e13: 0
-    e20: 0
-    e21: 0
-    e22: 1
-    e23: 0
-    e30: 0
-    e31: 0
-    e32: 0
-    e33: 1
-  m_InstancedGameObject: {fileID: 0}
-  m_Flags: 3
-  m_ColliderType: 1
 --- !u!1001 &364662366
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -4589,6 +4347,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c27ea98ccf889644d8028b76abf6c414, type: 3}
+--- !u!4 &770942181 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 770942180}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &797232558 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 6730675659189887117, guid: 0a6374035043fad4488f784be74372fa,
@@ -4686,10 +4449,6 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 1644031347, guid: c518b6c1d8c68b34cb54df3a89dfdef7, type: 3}
-      propertyPath: m_IsTrigger
-      value: 1
-      objectReference: {fileID: 0}
     - target: {fileID: 7694794517369643402, guid: c518b6c1d8c68b34cb54df3a89dfdef7,
         type: 3}
       propertyPath: MovementY
@@ -4699,6 +4458,10 @@ PrefabInstance:
         type: 3}
       propertyPath: VerticalSpeed
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1644031347, guid: c518b6c1d8c68b34cb54df3a89dfdef7, type: 3}
+      propertyPath: m_IsTrigger
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c518b6c1d8c68b34cb54df3a89dfdef7, type: 3}
@@ -4983,8 +4746,7 @@ PrefabInstance:
   m_SourcePrefab: {fileID: 100100000, guid: c27ea98ccf889644d8028b76abf6c414, type: 3}
 --- !u!4 &952128624 stripped
 Transform:
-  m_CorrespondingSourceObject: {fileID: 6949034506419064103, guid: c27ea98ccf889644d8028b76abf6c414,
-    type: 3}
+  m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 952128623}
   m_PrefabAsset: {fileID: 0}
 --- !u!1001 &984386583
@@ -5308,8 +5070,9 @@ MonoBehaviour:
   Map2: {fileID: 1623232981}
   _text: {fileID: 1076287465}
   _startRespawn: {fileID: 727059770}
-  _menuPanel: {fileID: 0}
-  _soundManager: {fileID: 0}
+  _menuPanel: {fileID: 7022764349969853338, guid: 8ffc026383efe5f49b5eb296bf353b06,
+    type: 3}
+  _soundManager: {fileID: 1514534494}
   _level: {fileID: 1501336798}
   _hud: {fileID: 0}
 --- !u!4 &1029989898
@@ -30052,8 +29815,6 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-    m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
-      Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
   m_FontData:
     m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
     m_FontSize: 25
@@ -30236,8 +29997,7 @@ PrefabInstance:
   m_SourcePrefab: {fileID: 100100000, guid: c27ea98ccf889644d8028b76abf6c414, type: 3}
 --- !u!4 &1094914863 stripped
 Transform:
-  m_CorrespondingSourceObject: {fileID: 6949034506419064103, guid: c27ea98ccf889644d8028b76abf6c414,
-    type: 3}
+  m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 1094914862}
   m_PrefabAsset: {fileID: 0}
 --- !u!1 &1097230047
@@ -30307,7 +30067,7 @@ SpriteRenderer:
   m_Size: {x: 5.24, y: 10}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
-  m_WasSpriteAssigned: 1
+  m_WasSpriteAssigned: 0
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
 --- !u!4 &1097230049
@@ -88679,6 +88439,11 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 1157154685}
   m_PrefabAsset: {fileID: 0}
+--- !u!4 &1157154687 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 1157154685}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1185500597
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -93924,8 +93689,7 @@ PrefabInstance:
   m_SourcePrefab: {fileID: 100100000, guid: c27ea98ccf889644d8028b76abf6c414, type: 3}
 --- !u!4 &1250582234 stripped
 Transform:
-  m_CorrespondingSourceObject: {fileID: 6949034506419064103, guid: c27ea98ccf889644d8028b76abf6c414,
-    type: 3}
+  m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 1250582233}
   m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1291215098
@@ -102302,12 +102066,12 @@ PrefabInstance:
       propertyPath: m_IsTrigger
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 5964597568765211525, guid: 36ff49780736161458c21c3224fb172f,
+    - target: {fileID: 5964597568775729618, guid: 36ff49780736161458c21c3224fb172f,
         type: 3}
       propertyPath: m_TagString
       value: Trap
       objectReference: {fileID: 0}
-    - target: {fileID: 5964597568775729618, guid: 36ff49780736161458c21c3224fb172f,
+    - target: {fileID: 5964597568765211525, guid: 36ff49780736161458c21c3224fb172f,
         type: 3}
       propertyPath: m_TagString
       value: Trap
@@ -102516,7 +102280,7 @@ Transform:
   m_LocalPosition: {x: -21.04, y: 0.98, z: 0.8318889}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
-  - {fileID: 1157154686}
+  - {fileID: 1157154687}
   - {fileID: 1676280748}
   m_Father: {fileID: 0}
   m_RootOrder: 3
@@ -102730,7 +102494,7 @@ SpriteRenderer:
   m_Size: {x: 40.96, y: 10.24}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
-  m_WasSpriteAssigned: 1
+  m_WasSpriteAssigned: 0
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
 --- !u!4 &1672909322
@@ -102774,7 +102538,7 @@ Transform:
   m_LocalPosition: {x: 4.2420864, y: 2.7001977, z: -1.1734984}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
-  - {fileID: 6949034506419064103}
+  - {fileID: 770942181}
   - {fileID: 574369014}
   - {fileID: 1574243904}
   - {fileID: 505338887}
@@ -103078,10 +102842,6 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 1644031347, guid: c518b6c1d8c68b34cb54df3a89dfdef7, type: 3}
-      propertyPath: m_IsTrigger
-      value: 1
-      objectReference: {fileID: 0}
     - target: {fileID: 7694794517369643402, guid: c518b6c1d8c68b34cb54df3a89dfdef7,
         type: 3}
       propertyPath: VerticalSpeed
@@ -103091,6 +102851,10 @@ PrefabInstance:
         type: 3}
       propertyPath: MovementY
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1644031347, guid: c518b6c1d8c68b34cb54df3a89dfdef7, type: 3}
+      propertyPath: m_IsTrigger
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c518b6c1d8c68b34cb54df3a89dfdef7, type: 3}
@@ -104108,7 +103872,7 @@ Transform:
   m_Children:
   - {fileID: 1351916993}
   m_Father: {fileID: 1157154686}
-  m_RootOrder: 1
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &1993941052 stripped
 Transform:
@@ -111177,12 +110941,6 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c518b6c1d8c68b34cb54df3a89dfdef7, type: 3}
---- !u!4 &6949034506419064103 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 6949034506419064103, guid: c27ea98ccf889644d8028b76abf6c414,
-    type: 3}
-  m_PrefabInstance: {fileID: 770942180}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &7648185114137802901
 PrefabInstance:
   m_ObjectHideFlags: 0

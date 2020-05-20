@@ -56,7 +56,7 @@ public class PlayerPlatformerController : PhysicsObject
     {
         if (collision.gameObject.tag == "Trap")
         {
-            _gameManager.Respawn();
+            _gameManager.ReSpawn();
         }
     }
 
@@ -64,12 +64,12 @@ public class PlayerPlatformerController : PhysicsObject
     {
         if (collision.gameObject.tag == "Item")
         {
-            _gameManager.CheckPointCatched(collision.transform);
+            _gameManager.CheckPointReached(collision.transform);
         }
 
         if (collision.gameObject.tag == "Home")
         {
-            _gameManager.ChangeMap();
+            _gameManager.LevelUp();
         }
     }
 }

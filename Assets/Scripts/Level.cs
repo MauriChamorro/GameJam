@@ -14,7 +14,7 @@ namespace Assets.Scripts
         private void Start()
         {
             _cantItems = -1;
-            CheckPoint(lastCheckPoint);
+            SetCheckPoint(lastCheckPoint);
         }
 
         public void SetStartCheckPoint(Transform pCheckPointPos)
@@ -22,7 +22,7 @@ namespace Assets.Scripts
             lastCheckPoint = pCheckPointPos;
         }
 
-        public void CheckPoint(Transform pCheckPointPos)
+        public void SetCheckPoint(Transform pCheckPointPos)
         {
             lastCheckPoint = pCheckPointPos;
             _cantItems++;
